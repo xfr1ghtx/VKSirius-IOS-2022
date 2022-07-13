@@ -48,7 +48,7 @@ final class ViewModel{
         return apps.count
     }
     
-    func selectRow(at indexPath: IndexPath){
+    func didSelectRow(at indexPath: IndexPath){
         UIApplication.shared.open((URL(string:apps[indexPath.row].link) ?? URL(string: "apple.com"))!)
     }
     
