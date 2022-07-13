@@ -72,9 +72,9 @@
 		8B4D7EE1287F212200F0DC55 /* VKSirius */ = {
 			isa = PBXGroup;
 			children = (
-				8B4D7F05287F286000F0DC55 /* Custom Cell */,
-				8B4D7F02287F23DC00F0DC55 /* Constans */,
 				8B4D7F01287F23D400F0DC55 /* Scene */,
+				8B4D7F02287F23DC00F0DC55 /* Constans */,
+				8B4D7F05287F286000F0DC55 /* Custom Cell */,
 				8B4D7EE2287F212200F0DC55 /* AppDelegate.swift */,
 				8B4D7EE4287F212200F0DC55 /* SceneDelegate.swift */,
 				8B4D7EEB287F212400F0DC55 /* Assets.xcassets */,
@@ -87,9 +87,9 @@
 		8B4D7F01287F23D400F0DC55 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				8B4D7EE6287F212200F0DC55 /* ViewController.swift */,
-				8B4D7F08287F36AA00F0DC55 /* ViewModel.swift */,
-				8B4D7F0A287F36B300F0DC55 /* Model.swift */,
+				8B4D7F10287F8F0B00F0DC55 /* Model */,
+				8B4D7F0F287F8EFC00F0DC55 /* ViewModel */,
+				8B4D7F0E287F8EEB00F0DC55 /* View */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -110,6 +110,30 @@
 				8B4D7F06287F287D00F0DC55 /* CustomTableViewCell.swift */,
 			);
 			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		8B4D7F0E287F8EEB00F0DC55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B4D7EE6287F212200F0DC55 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B4D7F0F287F8EFC00F0DC55 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B4D7F08287F36AA00F0DC55 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8B4D7F10287F8F0B00F0DC55 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8B4D7F0A287F36B300F0DC55 /* Model.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,6 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2DK6UP5TR4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VKSirius/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -366,6 +391,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2DK6UP5TR4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VKSirius/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
