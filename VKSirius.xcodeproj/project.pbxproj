@@ -17,6 +17,10 @@
 		8B4D7EFE287F22E500F0DC55 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8B4D7EFD287F22E500F0DC55 /* Alamofire */; };
 		8B4D7F00287F238100F0DC55 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D7EFF287F238100F0DC55 /* Colors.swift */; };
 		8B4D7F04287F257900F0DC55 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D7F03287F257900F0DC55 /* Strings.swift */; };
+		8B4D7F07287F287D00F0DC55 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D7F06287F287D00F0DC55 /* CustomTableViewCell.swift */; };
+		8B4D7F09287F36AA00F0DC55 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D7F08287F36AA00F0DC55 /* ViewModel.swift */; };
+		8B4D7F0B287F36B300F0DC55 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D7F0A287F36B300F0DC55 /* Model.swift */; };
+		8B4D7F0D287F747700F0DC55 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D7F0C287F747700F0DC55 /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		8B4D7EF0287F212400F0DC55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B4D7EFF287F238100F0DC55 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8B4D7F03287F257900F0DC55 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		8B4D7F06287F287D00F0DC55 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		8B4D7F08287F36AA00F0DC55 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		8B4D7F0A287F36B300F0DC55 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		8B4D7F0C287F747700F0DC55 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +72,8 @@
 		8B4D7EE1287F212200F0DC55 /* VKSirius */ = {
 			isa = PBXGroup;
 			children = (
-				8B4D7F02287F23DC00F0DC55 /* Helpers */,
+				8B4D7F05287F286000F0DC55 /* Custom Cell */,
+				8B4D7F02287F23DC00F0DC55 /* Constans */,
 				8B4D7F01287F23D400F0DC55 /* Scene */,
 				8B4D7EE2287F212200F0DC55 /* AppDelegate.swift */,
 				8B4D7EE4287F212200F0DC55 /* SceneDelegate.swift */,
@@ -79,17 +88,28 @@
 			isa = PBXGroup;
 			children = (
 				8B4D7EE6287F212200F0DC55 /* ViewController.swift */,
+				8B4D7F08287F36AA00F0DC55 /* ViewModel.swift */,
+				8B4D7F0A287F36B300F0DC55 /* Model.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
 		};
-		8B4D7F02287F23DC00F0DC55 /* Helpers */ = {
+		8B4D7F02287F23DC00F0DC55 /* Constans */ = {
 			isa = PBXGroup;
 			children = (
 				8B4D7EFF287F238100F0DC55 /* Colors.swift */,
 				8B4D7F03287F257900F0DC55 /* Strings.swift */,
+				8B4D7F0C287F747700F0DC55 /* Images.swift */,
 			);
-			path = Helpers;
+			path = Constans;
+			sourceTree = "<group>";
+		};
+		8B4D7F05287F286000F0DC55 /* Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8B4D7F06287F287D00F0DC55 /* CustomTableViewCell.swift */,
+			);
+			path = "Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,11 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B4D7F07287F287D00F0DC55 /* CustomTableViewCell.swift in Sources */,
 				8B4D7EE7287F212200F0DC55 /* ViewController.swift in Sources */,
 				8B4D7F00287F238100F0DC55 /* Colors.swift in Sources */,
 				8B4D7F04287F257900F0DC55 /* Strings.swift in Sources */,
+				8B4D7F0D287F747700F0DC55 /* Images.swift in Sources */,
 				8B4D7EE3287F212200F0DC55 /* AppDelegate.swift in Sources */,
 				8B4D7EE5287F212200F0DC55 /* SceneDelegate.swift in Sources */,
+				8B4D7F09287F36AA00F0DC55 /* ViewModel.swift in Sources */,
+				8B4D7F0B287F36B300F0DC55 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
