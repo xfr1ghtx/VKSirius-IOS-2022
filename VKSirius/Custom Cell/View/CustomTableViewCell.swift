@@ -29,7 +29,7 @@ class CustomTableViewCell: UITableViewCell {
     public func configure(viewModel: CustomTableViewCellViewModel){
         backgroundColor = UIColor.background
         selectionStyle = .none
-        logoOfApp.kf.setImage(with: URL(string: viewModel.link))
+        logoOfApp.kf.setImage(with: URL(string: viewModel.imageUrl))
         nameOfApp.text = viewModel.name
         descOfApp.text = viewModel.description
         
