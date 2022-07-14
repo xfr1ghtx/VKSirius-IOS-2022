@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  VKSirius
+
+  Created by developer on 14.07.2022.
+  
+*/
+
+
+"mainHeader" = "VK services";
+"errorAlertTitle" = "Error!";
+"errorAlertMessage" = "It seems that something went wrong";
+
+
+
