@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     private let headerLabel = UILabel()
     private let table = UITableView()
-
+    
     init(viewModel: ViewModel){
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -82,9 +82,13 @@ class ViewController: UIViewController {
         viewModel.didUpdate = {[weak self] in
             self?.table.reloadData()
         }
+        
+        viewModel.didOpenUrl = {url in
+            UIApplication.shared.open(url)
+        }
     }
     
-
+    
 }
 
 
@@ -97,7 +101,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell else{
             return UITableViewCell()
         }
-        cell.configure(app: viewModel.app(at: indexPath))
+        cell.configure(viewModel: viewModel.createCellViewModel(at: indexPath))
         return cell
     }
     

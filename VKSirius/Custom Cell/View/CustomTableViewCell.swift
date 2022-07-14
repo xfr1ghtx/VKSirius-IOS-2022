@@ -26,14 +26,15 @@ class CustomTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func configure(app: App){
+    public func configure(viewModel: CustomTableViewCellViewModel){
         backgroundColor = UIColor.background
         selectionStyle = .none
-        logoOfApp.kf.setImage(with: URL(string: app.iconUrl))
-        nameOfApp.text = app.name
-        descOfApp.text = app.description
+        logoOfApp.kf.setImage(with: URL(string: viewModel.link))
+        nameOfApp.text = viewModel.name
+        descOfApp.text = viewModel.description
+        
     }
-    
+        
     override func prepareForReuse() {
         super.prepareForReuse()
         logoOfApp.image = nil
@@ -46,7 +47,6 @@ class CustomTableViewCell: UITableViewCell {
         arrowSetup()
         nameOfAppSetup()
         descOfAppSetup()
-        
     }
     
     private func logoOfAppSetup(){
@@ -60,9 +60,6 @@ class CustomTableViewCell: UITableViewCell {
             make.leading.equalToSuperview().offset(20)
             make.centerY.equalToSuperview()
         }
-        
-        
-        
     }
     
     private func arrowSetup(){
@@ -84,7 +81,6 @@ class CustomTableViewCell: UITableViewCell {
         nameOfApp.text = "text"
         nameOfApp.font = .boldSystemFont(ofSize: 17)
         nameOfApp.textColor = UIColor.font
-        descOfApp.lineBreakMode = .byWordWrapping
         descOfApp.numberOfLines = 1
         
         nameOfApp.snp.makeConstraints{make in
@@ -97,7 +93,6 @@ class CustomTableViewCell: UITableViewCell {
     private func descOfAppSetup(){
         contentView.addSubview(descOfApp)
         
-        descOfApp.text = "Игры для ПК, консолей и смартфонов, в которые играют сотни миллионов геймеров"
         descOfApp.font = .systemFont(ofSize: 13)
         descOfApp.textColor = UIColor.font
         descOfApp.lineBreakMode = .byWordWrapping
@@ -117,5 +112,5 @@ class CustomTableViewCell: UITableViewCell {
     
     
     
-
+    
 }

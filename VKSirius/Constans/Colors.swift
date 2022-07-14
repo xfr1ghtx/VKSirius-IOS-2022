@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 extension UIColor{
     static let background = UIColor(named: "BackgroundColor")
     static let font = UIColor(named: "FontColor")
