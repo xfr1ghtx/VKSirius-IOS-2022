@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         view.addSubview(headerLabel)
         
         headerLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        headerLabel.text = Strings.mainHeader
+        headerLabel.text = NSLocalizedString("mainHeader", comment: "")
         headerLabel.textColor = UIColor.font
         
         headerLabel.snp.makeConstraints{ make in
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
         
         table.dataSource = self
         table.delegate = self
-        table.register(CustomTableViewCell.self, forCellReuseIdentifier: "CustomTableViewCell")
+        table.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
         table.rowHeight = UITableView.automaticDimension
         table.estimatedRowHeight = 90
         
@@ -73,8 +73,8 @@ class ViewController: UIViewController {
     }
     
     private func bindToViewModel(){
-        viewModel.didReceiveError = {[weak self] error in
-            let alert = UIAlertController(title: Strings.errorAlertTitle, message: Strings.errorAlertMessage, preferredStyle: .alert)
+        viewModel.didReceiveError = {[weak self] in
+            let alert = UIAlertController(title: NSLocalizedString("errorAlertTitle", comment: ""), message: NSLocalizedString("errorAlertMessage", comment: ""), preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .cancel))
             self?.present(alert,animated: true)
         }
@@ -104,10 +104,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         viewModel.didSelectRow(at: indexPath)
     }
-    
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 100
-//    }
     
 }
 

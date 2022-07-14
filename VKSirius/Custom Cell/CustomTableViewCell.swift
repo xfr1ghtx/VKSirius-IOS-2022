@@ -29,9 +29,9 @@ class CustomTableViewCell: UITableViewCell {
     public func configure(app: App){
         backgroundColor = UIColor.background
         selectionStyle = .none
-        logoOfApp.kf.setImage(with: URL(string: app.icon_url))
+        logoOfApp.kf.setImage(with: URL(string: app.iconUrl))
         nameOfApp.text = app.name
-        descOfApp.text = app.desctiption
+        descOfApp.text = app.description
     }
     
     override func prepareForReuse() {
