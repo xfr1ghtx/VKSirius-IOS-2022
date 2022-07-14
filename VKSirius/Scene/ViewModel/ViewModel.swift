@@ -15,9 +15,9 @@ final class ViewModel{
     
     var didReceiveError: (() -> Void)?
     var didUpdate: (() -> Void)?
+    var didOpenUrl: ((URL) -> Void)?
     
     func loadApps(){
-        
         if let path = Bundle.main.path(forResource: "result", ofType: "json") {
             do {
                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
@@ -25,11 +25,15 @@ final class ViewModel{
                     self.apps = jsonResult.body.services
                     self.didUpdate?()
                 }
-              } catch {
-                  self.didReceiveError?()
-              }
+            } catch {
+                self.didReceiveError?()
+            }
         }
-
+        
+    }
+    
+    func createCellViewModel(at indexPath: IndexPath) -> CustomTableViewCellViewModel{
+        return CustomTableViewCellViewModel(name: apps[indexPath.row].name, description: apps[indexPath.row].description, link: apps[indexPath.row].link, imageUrl: apps[indexPath.row].iconUrl)
     }
     
     func app(at indexPath: IndexPath) -> App{
@@ -42,10 +46,9 @@ final class ViewModel{
     
     func didSelectRow(at indexPath: IndexPath){
         if let url = URL(string:apps[indexPath.row].link){
-            UIApplication.shared.open(url)
-        }else {
+            self.didOpenUrl?(url)
+        }else{
             self.didReceiveError?()
         }
     }
-    
 }
