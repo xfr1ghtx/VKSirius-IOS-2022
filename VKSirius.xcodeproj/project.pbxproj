@@ -16,7 +16,6 @@
 		8B4D7EEF287F212400F0DC55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B4D7EED287F212400F0DC55 /* LaunchScreen.storyboard */; };
 		8B4D7EF8287F229B00F0DC55 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8B4D7EF7287F229B00F0DC55 /* SnapKit */; };
 		8B4D7EFB287F22CA00F0DC55 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8B4D7EFA287F22CA00F0DC55 /* Kingfisher */; };
-		8B4D7EFE287F22E500F0DC55 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8B4D7EFD287F22E500F0DC55 /* Alamofire */; };
 		8B4D7F00287F238100F0DC55 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D7EFF287F238100F0DC55 /* Colors.swift */; };
 		8B4D7F07287F287D00F0DC55 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D7F06287F287D00F0DC55 /* CustomTableViewCell.swift */; };
 		8B4D7F09287F36AA00F0DC55 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4D7F08287F36AA00F0DC55 /* ViewModel.swift */; };
@@ -49,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B4D7EFE287F22E500F0DC55 /* Alamofire in Frameworks */,
 				8B4D7EFB287F22CA00F0DC55 /* Kingfisher in Frameworks */,
 				8B4D7EF8287F229B00F0DC55 /* SnapKit in Frameworks */,
 			);
@@ -186,7 +184,6 @@
 			packageProductDependencies = (
 				8B4D7EF7287F229B00F0DC55 /* SnapKit */,
 				8B4D7EFA287F22CA00F0DC55 /* Kingfisher */,
-				8B4D7EFD287F22E500F0DC55 /* Alamofire */,
 			);
 			productName = VKSirius;
 			productReference = 8B4D7EDF287F212200F0DC55 /* VKSirius.app */;
@@ -517,11 +514,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8B4D7EF9287F22CA00F0DC55 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		8B4D7EFD287F22E500F0DC55 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8B4D7EFC287F22E500F0DC55 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
